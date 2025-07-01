@@ -25,10 +25,10 @@
         
         /* Header */
         .header {
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.15);
             color: white;
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: relative;
             z-index: 100;
         }
@@ -61,16 +61,29 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('philly.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            position: relative;
             min-height: 80vh;
             display: flex;
             align-items: center;
             text-align: center;
             color: white;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('philly.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: grayscale(100%);
+            z-index: -1;
         }
         
         .hero-content {
@@ -187,6 +200,27 @@
         .values h3 {
             color: #c41e3a;
             margin-bottom: 1rem;
+        }
+        
+        .bible-verse {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #c41e3a;
+            margin-top: 2rem;
+            font-style: italic;
+            text-align: center;
+            color: #666;
+        }
+        
+        .bible-verse p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .bible-reference {
+            font-size: 0.9rem;
+            color: #c41e3a;
+            font-weight: bold;
         }
         
         /* Footer */
@@ -377,6 +411,11 @@
                         <li><strong>Faith:</strong> Operating with Christian principles</li>
                         <li><strong>Community:</strong> Supporting our local Philadelphia area</li>
                     </ul>
+                    
+                    <div class="bible-verse">
+                        <p>"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</p>
+                        <div class="bible-reference">- Colossians 3:23</div>
+                    </div>
                 </div>
             </div>
         </div>
