@@ -25,7 +25,7 @@
         
         /* Header */
         .header {
-            background: rgba(0,0,0,0.15);
+            background: rgba(128,128,128,0.85);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -126,6 +126,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            margin-top: 1.5rem;
         }
         
         .cta-button:hover {
@@ -202,25 +203,19 @@
             margin-bottom: 1rem;
         }
         
-        .bible-verse {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #c41e3a;
-            margin-top: 2rem;
+        .hero-verse {
+            font-size: 0.95rem;
             font-style: italic;
-            text-align: center;
-            color: #666;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            color: #e0e0e0;
         }
         
-        .bible-verse p {
-            margin-bottom: 0.5rem;
-        }
-        
-        .bible-reference {
-            font-size: 0.9rem;
-            color: #c41e3a;
-            font-weight: bold;
+        .hero-verse-reference {
+            font-size: 0.85rem;
+            color: #ff6b6b;
+            margin-top: 0.3rem;
         }
         
         /* Footer */
@@ -354,6 +349,12 @@
                 <p class="hero-description">
                     Professional plumbing services you can trust. Nathan Mattero brings years of experience and a commitment to quality workmanship to every job. From emergency repairs to complete installations, we serve the Philadelphia area with integrity, expertise, and faith-based values.
                 </p>
+                
+                <div class="hero-verse">
+                    "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."
+                    <div class="hero-verse-reference">- Colossians 3:23</div>
+                </div>
+                
                 <button class="cta-button" onclick="openModal()">Get In Touch Today</button>
             </div>
         </div>
@@ -411,11 +412,6 @@
                         <li><strong>Faith:</strong> Operating with Christian principles</li>
                         <li><strong>Community:</strong> Supporting our local Philadelphia area</li>
                     </ul>
-                    
-                    <div class="bible-verse">
-                        <p>"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</p>
-                        <div class="bible-reference">- Colossians 3:23</div>
-                    </div>
                 </div>
             </div>
         </div>
