@@ -23,46 +23,6 @@
             padding: 0 20px;
         }
 
-        /* Dynamic Background Elements */
-        .dynamic-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .floating-element {
-            position: absolute;
-            opacity: 0.15;
-            animation: float 6s ease-in-out infinite;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            color: white;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-            font-size: 2rem;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-            font-size: 1.5rem;
-        }
-
-        .floating-element:nth-child(3) {
-            bottom: 30%;
-            left: 20%;
-            animation-delay: 4s;
-            font-size: 1.8rem;
-        }
-
         /* Header */
         header {
             background: linear-gradient(135deg, #c41e3a 0%, #8b1a2b 100%);
@@ -114,11 +74,6 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-
         @keyframes rotate {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -138,7 +93,7 @@
         .hero {
             background: 
                 linear-gradient(rgba(0, 0, 0, 0.6), rgba(196, 30, 58, 0.7)),
-                url('https://unsplash.com/photos/timelapse-photography-of-city-6LCen1qDcOw');
+                url('https://images.unsplash.com/photo-1539650116574-75c0c6d73d0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -203,8 +158,9 @@
             font-size: 1.1rem;
             transition: all 0.3s;
             box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-            animation: pulse 3s infinite;
             border: 2px solid rgba(255,255,255,0.9);
+            position: relative;
+            z-index: 3;
         }
 
         .cta-button:hover {
@@ -508,11 +464,6 @@
     </header>
 
     <section class="hero">
-        <div class="dynamic-bg">
-            <div class="floating-element">🔧</div>
-            <div class="floating-element">🚿</div>
-            <div class="floating-element">⚡</div>
-        </div>
         <div class="container">
             <h1>Mattero Mechanical</h1>
             <p class="mission">"Serving with Informative Excellence"</p>
